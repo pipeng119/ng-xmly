@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
       p {
-          width: 30px;
+        width: 30px;
         position: relative;
         line-height: 1.5em;
         /* 高度为需要显示的行数*行高，比如这里我们显示两行，则为3 */
@@ -26,5 +26,12 @@
   </head>
   <body>
     <p>这是一段要被这行的文字呀呀呀</p>
+    <div id="hostDiv">I love you</div>
+
+    <script type="text/javascript">
+      let hostDiv = document.getElementById("hostDiv");
+      let shadow = hostDiv.attachShadow();; // hostDiv.attachShadow({ mode: 'open'})
+      // shadow.innerHTML = '<a href="#">baidu</a>';
+    </script>
   </body>
 </html>
