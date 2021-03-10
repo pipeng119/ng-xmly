@@ -1,4 +1,12 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  Input,
+  TemplateRef,
+  Optional,
+} from '@angular/core';
+import { BreadcrumbComponent } from '../breadcrumb.component';
 
 @Component({
   selector: 'xm-breadcrumb-item',
@@ -8,9 +16,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class BreadcrumbItemComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Optional() readonly parent: BreadcrumbComponent) {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

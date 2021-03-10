@@ -3,6 +3,8 @@ import {
   OnInit,
   ChangeDetectionStrategy,
   ViewEncapsulation,
+  Input,
+  TemplateRef,
 } from '@angular/core';
 
 @Component({
@@ -13,6 +15,9 @@ import {
   encapsulation: ViewEncapsulation.None,
 })
 export class BreadcrumbComponent implements OnInit {
+  // 为了支持可以传递模板(Dom)
+  @Input() xmSeparator: TemplateRef<HTMLElement | string>;
+
   constructor() {}
 
   ngOnInit(): void {}

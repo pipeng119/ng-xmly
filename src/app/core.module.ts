@@ -7,8 +7,8 @@ import { BreadcrumbModule } from './share/components/breadcrumb/breadcrumb.modul
 
 @NgModule({
   declarations: [HeaderComponent],
-  imports: [BrowserModule, AppRoutingModule, ShareModule, BreadcrumbModule,],
-  exports: [HeaderComponent, ShareModule, BreadcrumbModule,],
+  imports: [BrowserModule, AppRoutingModule, ShareModule, BreadcrumbModule],
+  exports: [HeaderComponent, ShareModule, BreadcrumbModule],
 })
 export class CoreModule {
   constructor(@SkipSelf() @Optional() parentModule: CoreModule) {
